@@ -1,0 +1,6 @@
+*.info
+Assignment 1/Engines Assignment 1/Library/metadata/
+Assignment 1/Engines Assignment 1/Library/PackageCache/
+*.log
+*.cache
+Assignment 1/Engines Assignment 1/Library/ShaderCache/
