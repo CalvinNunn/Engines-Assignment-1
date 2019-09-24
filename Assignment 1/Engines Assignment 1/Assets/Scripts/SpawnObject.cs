@@ -13,7 +13,12 @@ public class SpawnObject : MonoBehaviour
     public InputField yScale;
     public InputField zScale;
 
-    public GameObject p;
+    public List<GameObject> p;
+    public GameObject spawnedObject;
+
+    public List<Vector3> positions;
+
+    public List<Vector3> cubePositions;
 
     float xP;
     float yP;
@@ -24,6 +29,8 @@ public class SpawnObject : MonoBehaviour
     float zS;
     public void Spawn()
     {
+        
+
          xP = float.Parse(xPos.text);
 
          yP = float.Parse(yPos.text);
@@ -36,7 +43,46 @@ public class SpawnObject : MonoBehaviour
          
          zS = float.Parse(zScale.text);
 
-       GameObject newObj = Instantiate(p, new Vector3(xP,yP,zP), Quaternion.identity);
-        newObj.transform.localScale = new Vector3(xS, yS, zS);
+        for (int i = 0; i < positions.Count; i++)
+        {
+            positions[i] = new Vector3(xP, yP, zP);
+
+        }
+
+        positions = getPositions();
+
+        for (int i = 0; i < p.Count; i++)
+        {
+            p[i] = spawnedObject;
+
+            //without flyweight
+            //p[i].transform.position = getPositions()[i];
+
+            //with flyweight
+            p[i].transform.position = cubePositions[i];
+
+            GameObject newObj = Instantiate(p[i], new Vector3(xP, yP, zP), Quaternion.identity);
+
+            cubePositions.Add(newObj.transform.position);
+
+            newObj.transform.localScale = new Vector3(xS, yS, zS);
+
+            p[i] = newObj;
+        }
     }
+    List<Vector3> getPositions()
+    {
+        //Create a new list
+        List<Vector3> getPos = new List<Vector3>();
+
+        //Add body part positions to the list
+        for (int i = 0; i < positions.Count; i++)
+        {
+            getPos.Add(new Vector3());
+        }
+
+        return getPos;
+    }
+
+
 }

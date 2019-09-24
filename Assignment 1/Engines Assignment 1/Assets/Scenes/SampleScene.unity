@@ -959,7 +959,14 @@ MonoBehaviour:
   xScale: {fileID: 1919472476}
   yScale: {fileID: 1544542859}
   zScale: {fileID: 745208303}
-  p: {fileID: 2613428231390797477, guid: 10bbf35e0f4516c41b43156a3cab6a42, type: 3}
+  p:
+  - {fileID: 0}
+  spawnedObject: {fileID: 2613428231390797477, guid: 10bbf35e0f4516c41b43156a3cab6a42,
+    type: 3}
+  positions:
+  - {x: 0, y: 0, z: 0}
+  cubePositions:
+  - {x: 0, y: 0, z: 0}
 --- !u!1 &651707599
 GameObject:
   m_ObjectHideFlags: 0
