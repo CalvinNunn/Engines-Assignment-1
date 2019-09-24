@@ -15,19 +15,19 @@ public class CameraMove : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("w"))
+        if (Input.GetKeyDown("i"))
         {
             transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z + speed);
         }
-        else if (Input.GetKeyDown("s"))
+        else if (Input.GetKeyDown("k"))
         {
             transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - speed);
         }
-        else if (Input.GetKeyDown("a"))
+        else if (Input.GetKeyDown("j"))
         {
             transform.position = new Vector3(transform.position.x - speed, transform.position.y, transform.position.z);
         }
-        else if (Input.GetKeyDown("d"))
+        else if (Input.GetKeyDown("l"))
         {
             transform.position = new Vector3(transform.position.x + speed, transform.position.y, transform.position.z);
         }

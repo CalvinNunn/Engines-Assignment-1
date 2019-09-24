@@ -63,6 +63,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\CameraMove.cs" />
+    <Compile Include="Assets\Scripts\Command.cs" />
+    <Compile Include="Assets\Scripts\InputHandler.cs" />
+    <Compile Include="Assets\Scripts\PlayerControl.cs" />
     <Compile Include="Assets\Scripts\SpawnObject.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/check/OneDrive/Desktop/Year 4 Semester 1/Game Engine Design &amp; Implem. - 40168.201909-INFR-3110U-001/Engines A1/Assignment 1/Engines Assignment 1/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
