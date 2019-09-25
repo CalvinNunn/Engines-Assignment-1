@@ -6,6 +6,12 @@ public class CameraMove : MonoBehaviour
 {
 
     float speed = 0.5f;
+
+    float speedH = 2.0f;
+    float speedV = 2.0f;
+
+    float yaw = 0.0f;
+    float pitch = 0.0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,5 +37,10 @@ public class CameraMove : MonoBehaviour
         {
             transform.position = new Vector3(transform.position.x + speed, transform.position.y, transform.position.z);
         }
+        //yaw += speedH * Input.GetAxis("Mouse X");
+        //pitch -= speedV * Input.GetAxis("Mouse Y");
+
+        //transform.eulerAngles = new Vector3(pitch, yaw, 0.0f);
+        
     }
 }

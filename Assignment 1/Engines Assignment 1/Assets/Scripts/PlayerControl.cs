@@ -30,14 +30,11 @@ public class PlayerControl : MonoBehaviour
 
     public void mL()
     {
-        Debug.Log("TESTL");
         r.AddForce(new Vector3(hor, 0, 0) * speed);
     }
 
     public void mR()
     {
-        Debug.Log("TESTR");
-
         r.AddForce(new Vector3(hor, 0, 0) * speed);
     }
 
