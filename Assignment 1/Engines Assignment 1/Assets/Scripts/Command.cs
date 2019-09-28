@@ -69,6 +69,18 @@ namespace CommandPattern {
             p.transform.Translate(-p.transform.right * 0.5f);
         }
     }
+
+    public class jumpCommand : Command
+    {
+        public override void Execute(GameObject p, Command c)
+        {
+            p.GetComponent<PlayerControl>().jump();
+            mP(p);
+            InputHandler.oldCommands.Add(c);
+        }
+        
+    }
+
     public class UndoCommand : Command
     {
         //Called when we press a key

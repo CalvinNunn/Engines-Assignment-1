@@ -42,4 +42,8 @@ public class PlayerControl : MonoBehaviour
     {
         r.AddForce(new Vector3(0, 0, ver) * speed);
     }
+    public void jump()
+    {
+        r.AddForce(transform.up * 8, ForceMode.Impulse);
+    }
 }

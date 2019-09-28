@@ -27,6 +27,7 @@ public class SpawnObject : MonoBehaviour
     float xS;
     float yS;
     float zS;
+
     public void Spawn()
     {
         
@@ -66,6 +67,8 @@ public class SpawnObject : MonoBehaviour
             cubePositions.Add(newObj.transform.position);
 
             newObj.transform.localScale = new Vector3(xS, yS, zS);
+
+            newObj.GetComponent<Renderer>().material.color = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
 
             p[i] = newObj;
         }

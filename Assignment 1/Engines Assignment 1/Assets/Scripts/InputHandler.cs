@@ -6,13 +6,14 @@ namespace CommandPattern
 {
     public class InputHandler : MonoBehaviour
     {
-        private Command buttonW, buttonA, buttonS, buttonD, buttonR;
+        private Command buttonW, buttonA, buttonS, buttonD, buttonR, buttonSpace;
         private bool isReplaying;
         public GameObject player;
         public static List<Command> oldCommands = new List<Command>();
         public static bool shouldStartReplay;
         private Coroutine replayCoroutine;
 
+        public int timer = 200;
         void Start()
         {
             buttonW = new moveForward();
@@ -20,6 +21,7 @@ namespace CommandPattern
             buttonS = new moveBack();
             buttonD = new moveRight();
             buttonR = new UndoCommand();
+            buttonSpace = new jumpCommand();
         }
 
         void Update()
@@ -29,6 +31,7 @@ namespace CommandPattern
                 HandleInput();
             }
             StartReplay();
+            timer++;
         }
 
         void HandleInput()
@@ -55,6 +58,11 @@ namespace CommandPattern
             if (Input.GetKey("r"))
             {
                 buttonR.Execute(player, buttonD);
+            }
+            if (Input.GetKeyDown("space") && timer > 190)
+            {
+                buttonSpace.Execute(player, buttonD);
+                timer = 0;
             }
         }
 

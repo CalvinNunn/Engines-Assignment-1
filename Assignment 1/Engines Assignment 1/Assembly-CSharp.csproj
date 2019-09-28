@@ -70,6 +70,7 @@
     <Compile Include="Assets\Scripts\InputHandler.cs" />
     <Compile Include="Assets\Scripts\PlayerControl.cs" />
     <Compile Include="Assets\Scripts\SpawnObject.cs" />
+    <None Include="Assets\TXTFiles\Level.txt" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/Christian/Desktop/School/Year 4 Semester 1/Engines/Assignment 1 Engines/Assignment 1/Engines Assignment 1/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
