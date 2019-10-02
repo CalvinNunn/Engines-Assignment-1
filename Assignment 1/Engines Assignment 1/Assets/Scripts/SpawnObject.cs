@@ -20,6 +20,8 @@ public class SpawnObject : MonoBehaviour
 
     public List<Vector3> cubePositions;
 
+    public GameObject cubeContainer;
+
     float xP;
     float yP;
     float zP;
@@ -67,6 +69,8 @@ public class SpawnObject : MonoBehaviour
             cubePositions.Add(newObj.transform.position);
 
             newObj.transform.localScale = new Vector3(xS, yS, zS);
+
+            newObj.transform.parent = cubeContainer.transform;
 
             newObj.GetComponent<Renderer>().material.color = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
 

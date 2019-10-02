@@ -2,3 +2,8 @@ Assignment 1/Engines Assignment 1/Library/ShaderCache/
 Assignment 1/Engines Assignment 1/Library/PackageCache/
 Assignment 1/Engines Assignment 1/Library/metadata/
 Assignment 1/Engines Assignment 1/Temp/
+*.tlog
+Assignment 1/Engines Assignment 1/.vs/
+A1DLL/A1DLL/x64/Release/
+A1DLL/x64/Release/
+A1DLL/.vs/
