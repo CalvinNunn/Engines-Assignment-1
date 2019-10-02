@@ -24,7 +24,7 @@ namespace CommandPattern {
         }
         public override void undo(GameObject p)
         {
-            p.transform.Translate(-p.transform.forward * 0.5f);
+            p.transform.Translate(-p.transform.forward * 0.7f);
         }
     }
 
@@ -38,7 +38,7 @@ namespace CommandPattern {
         }
         public override void undo(GameObject p)
         {
-            p.transform.Translate(p.transform.forward * 0.5f);
+            p.transform.Translate(p.transform.forward * 0.7f);
         }
     }
 
@@ -52,7 +52,7 @@ namespace CommandPattern {
         }
         public override void undo(GameObject p)
         {
-            p.transform.Translate(p.transform.right * 0.5f);
+            p.transform.Translate(p.transform.right * 0.7f);
         }
     }
 
@@ -66,7 +66,7 @@ namespace CommandPattern {
         }
         public override void undo(GameObject p)
         {
-            p.transform.Translate(-p.transform.right * 0.5f);
+            p.transform.Translate(-p.transform.right * 0.7f);
         }
     }
 
