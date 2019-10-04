@@ -1,23 +1,23 @@
 #include "FileIO.h"
 
 
-void FileIO::saveFile(float x, float y, float z, float sX, float sY, float sZ, string name) {
+void FileIO::saveFile(float x, float y, float z, float sX, float sY, float sZ) {
 	
-	myfile.open(name + ".txt", ios::app);
+	myfile.open("pos.txt", ios::app);
 
 	myfile << to_string(x) + "," + to_string(y) + "," + to_string(z) + "," + to_string(sX) + "," + to_string(sY) + "," + to_string(sZ) << endl;
 
 	myfile.close();
 }
 
-void FileIO::clearFile(string name) {
-	myfile.open(name + ".txt");
+void FileIO::clearFile() {
+	myfile.open("pos.txt");
 	myfile.clear();
 }
 
-int FileIO::loadFileX(int i, string name) {
+int FileIO::loadFileX(int i) {
 
-	lfile.open(name + ".txt");
+	lfile.open("pos.txt");
 
 	string line;
 
@@ -36,9 +36,9 @@ int FileIO::loadFileX(int i, string name) {
 	return x;
 }
 
-int FileIO::loadFileY(int i, string name) {
+int FileIO::loadFileY(int i) {
 
-	lfile.open(name + ".txt");
+	lfile.open("pos.txt");
 
 	string line;
 
@@ -61,8 +61,8 @@ int FileIO::loadFileY(int i, string name) {
 	return y;
 }
 
-int FileIO::loadFileZ(int i, string name) {
-	lfile.open(name + ".txt");
+int FileIO::loadFileZ(int i) {
+	lfile.open("pos.txt");
 
 	string line;
 
@@ -87,9 +87,9 @@ int FileIO::loadFileZ(int i, string name) {
 	return z;
 }
 
-int FileIO::loadFileSX(int i, string name)
+int FileIO::loadFileSX(int i)
 {
-	lfile.open(name + ".txt");
+	lfile.open("pos.txt");
 
 	string line;
 
@@ -111,9 +111,9 @@ int FileIO::loadFileSX(int i, string name)
 	return x;
 }
 
-int FileIO::loadFileSY(int i, string name)
+int FileIO::loadFileSY(int i)
 {
-	lfile.open(name + ".txt");
+	lfile.open("pos.txt");
 
 	string line;
 
@@ -136,9 +136,9 @@ int FileIO::loadFileSY(int i, string name)
 	return y;
 }
 
-int FileIO::loadFileSZ(int i, string name)
+int FileIO::loadFileSZ(int i)
 {
-	lfile.open(name + ".txt");
+	lfile.open("pos.txt");
 
 	string line;
 
@@ -161,11 +161,11 @@ int FileIO::loadFileSZ(int i, string name)
 	return z;
 }
 
-int FileIO::getLines(string name) {
+int FileIO::getLines() {
 
 	int numLines = 0;
 	string line;
-	ifstream myfile(name + ".txt");
+	ifstream myfile("pos.txt");
 
 	while (getline(myfile, line)){
 		++numLines;
