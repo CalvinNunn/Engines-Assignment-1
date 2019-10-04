@@ -95,7 +95,7 @@ public class DLLtest : MonoBehaviour
 
             //newObj.transform.parent = cubeContainer.transform;
 
-
+            newObj.GetComponent<Renderer>().material.color = Random.ColorHSV(0f, 1f, 1f, 1f, 0.5f, 1f);
 
         }
         
