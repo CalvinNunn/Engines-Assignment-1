@@ -2,47 +2,47 @@
 
 FileIO sl;
 
-void saveFile(float x, float y, float z, float sX, float sY, float sZ) {
+void saveFile(float x, float y, float z, float sX, float sY, float sZ, string name) {
 
-	return sl.saveFile(x, y, z, sX, sY, sZ);
+	return sl.saveFile(x, y, z, sX, sY, sZ, name);
 }
 
-int loadFileX(int i) {
+int loadFileX(int i, string name) {
 
-	return sl.loadFileX(i);
+	return sl.loadFileX(i, name);
 }
 
-int loadFileY(int i) {
+int loadFileY(int i, string name) {
 
-	return sl.loadFileY(i);
+	return sl.loadFileY(i, name);
 }
 
-int loadFileZ(int i) {
+int loadFileZ(int i, string name) {
 
-	return sl.loadFileZ(i);
+	return sl.loadFileZ(i, name);
 }
 
- void clearFile()
+ void clearFile(string name)
 {
-	 return sl.clearFile();
+	 return sl.clearFile(name);
 }
 
- int loadFileSX(int i)
+ int loadFileSX(int i, string name)
 {
-	 return sl.loadFileSX(i);
+	 return sl.loadFileSX(i, name);
 }
 
- int loadFileSY(int i)
+ int loadFileSY(int i, string name)
 {
-	 return sl.loadFileSY(i);
+	 return sl.loadFileSY(i, name);
 }
 
- int loadFileSZ(int i)
+ int loadFileSZ(int i, string name)
 {
-	 return sl.loadFileSZ(i);
+	 return sl.loadFileSZ(i, name);
 }
  
- int getLines() {
-	 return sl.getLines();
+ int getLines(string name) {
+	 return sl.getLines(name);
  }
 

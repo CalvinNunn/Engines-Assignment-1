@@ -1,25 +1,23 @@
 #include "FileIO.h"
 
 
-void FileIO::saveFile(float x, float y, float z, float sX, float sY, float sZ) {
-	myfile.open("pos.txt", ios::app);
-
+void FileIO::saveFile(float x, float y, float z, float sX, float sY, float sZ, string name) {
+	
+	myfile.open(name + ".txt", ios::app);
 
 	myfile << to_string(x) + "," + to_string(y) + "," + to_string(z) + "," + to_string(sX) + "," + to_string(sY) + "," + to_string(sZ) << endl;
-
 
 	myfile.close();
 }
 
-
-void FileIO::clearFile() {
-	myfile.open("pos.txt");
+void FileIO::clearFile(string name) {
+	myfile.open(name + ".txt");
 	myfile.clear();
 }
 
-int FileIO::loadFileX(int i) {
+int FileIO::loadFileX(int i, string name) {
 
-	lfile.open("pos.txt");
+	lfile.open(name + ".txt");
 
 	string line;
 
@@ -38,9 +36,9 @@ int FileIO::loadFileX(int i) {
 	return x;
 }
 
-int FileIO::loadFileY(int i) {
+int FileIO::loadFileY(int i, string name) {
 
-	lfile.open("pos.txt");
+	lfile.open(name + ".txt");
 
 	string line;
 
@@ -63,8 +61,8 @@ int FileIO::loadFileY(int i) {
 	return y;
 }
 
-int FileIO::loadFileZ(int i) {
-	lfile.open("pos.txt");
+int FileIO::loadFileZ(int i, string name) {
+	lfile.open(name + ".txt");
 
 	string line;
 
@@ -89,9 +87,9 @@ int FileIO::loadFileZ(int i) {
 	return z;
 }
 
-int FileIO::loadFileSX(int i)
+int FileIO::loadFileSX(int i, string name)
 {
-	lfile.open("pos.txt");
+	lfile.open(name + ".txt");
 
 	string line;
 
@@ -113,9 +111,9 @@ int FileIO::loadFileSX(int i)
 	return x;
 }
 
-int FileIO::loadFileSY(int i)
+int FileIO::loadFileSY(int i, string name)
 {
-	lfile.open("pos.txt");
+	lfile.open(name + ".txt");
 
 	string line;
 
@@ -138,9 +136,9 @@ int FileIO::loadFileSY(int i)
 	return y;
 }
 
-int FileIO::loadFileSZ(int i)
+int FileIO::loadFileSZ(int i, string name)
 {
-	lfile.open("pos.txt");
+	lfile.open(name + ".txt");
 
 	string line;
 
@@ -163,11 +161,11 @@ int FileIO::loadFileSZ(int i)
 	return z;
 }
 
-int FileIO::getLines() {
+int FileIO::getLines(string name) {
 
 	int numLines = 0;
 	string line;
-	ifstream myfile("pos.txt");
+	ifstream myfile(name + ".txt");
 
 	while (getline(myfile, line)){
 		++numLines;

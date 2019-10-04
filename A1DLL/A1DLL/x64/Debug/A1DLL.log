@@ -1,0 +1,13 @@
+﻿  FileIO.cpp
+c:\users\christian\desktop\school\year 4 semester 1\engines\assignment 1 engines\a1dll\a1dll\fileio.h(12): warning C4251: 'FileIO::myfile': class 'std::basic_ofstream<char,std::char_traits<char>>' needs to have dll-interface to be used by clients of class 'FileIO'
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\iosfwd(626): note: see declaration of 'std::basic_ofstream<char,std::char_traits<char>>'
+c:\users\christian\desktop\school\year 4 semester 1\engines\assignment 1 engines\a1dll\a1dll\fileio.h(13): warning C4251: 'FileIO::lfile': class 'std::basic_ifstream<char,std::char_traits<char>>' needs to have dll-interface to be used by clients of class 'FileIO'
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\iosfwd(625): note: see declaration of 'std::basic_ifstream<char,std::char_traits<char>>'
+  Wrapper.cpp
+c:\users\christian\desktop\school\year 4 semester 1\engines\assignment 1 engines\a1dll\a1dll\fileio.h(12): warning C4251: 'FileIO::myfile': class 'std::basic_ofstream<char,std::char_traits<char>>' needs to have dll-interface to be used by clients of class 'FileIO'
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\iosfwd(626): note: see declaration of 'std::basic_ofstream<char,std::char_traits<char>>'
+c:\users\christian\desktop\school\year 4 semester 1\engines\assignment 1 engines\a1dll\a1dll\fileio.h(13): warning C4251: 'FileIO::lfile': class 'std::basic_ifstream<char,std::char_traits<char>>' needs to have dll-interface to be used by clients of class 'FileIO'
+  c:\program files (x86)\microsoft visual studio\2017\community\vc\tools\msvc\14.16.27023\include\iosfwd(625): note: see declaration of 'std::basic_ifstream<char,std::char_traits<char>>'
+  Generating Code...
+     Creating library C:\Users\Christian\Desktop\School\Year 4 Semester 1\Engines\Assignment 1 Engines\A1DLL\x64\Debug\A1DLL.lib and object C:\Users\Christian\Desktop\School\Year 4 Semester 1\Engines\Assignment 1 Engines\A1DLL\x64\Debug\A1DLL.exp
+  A1DLL.vcxproj -> C:\Users\Christian\Desktop\School\Year 4 Semester 1\Engines\Assignment 1 Engines\A1DLL\x64\Debug\A1DLL.dll

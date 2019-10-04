@@ -1266,7 +1266,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 166.33, y: 0}
+  m_AnchoredPosition: {x: -172.36, y: -88.1}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &762450422
@@ -1919,7 +1919,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -344.15, y: -85.92}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1002107585
@@ -2061,7 +2061,6 @@ GameObject:
   - component: {fileID: 1113831248}
   - component: {fileID: 1113831247}
   - component: {fileID: 1113831246}
-  - component: {fileID: 1113831245}
   m_Layer: 5
   m_Name: DeleteObject
   m_TagString: Untagged
@@ -2086,34 +2085,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -172.07, y: 140.74}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1113831245
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1113831243}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ec7aab3ae99e81d459d6ac8828580d42, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  xPos: {fileID: 522607746}
-  yPos: {fileID: 1443364717}
-  zPos: {fileID: 1276916504}
-  xScale: {fileID: 1919472476}
-  yScale: {fileID: 1544542859}
-  zScale: {fileID: 745208303}
-  p: []
-  spawnedObject: {fileID: 2613428231390797477, guid: 10bbf35e0f4516c41b43156a3cab6a42,
-    type: 3}
-  positions: []
-  cubePositions: []
-  goalC: {fileID: 0}
-  cubeContainer: {fileID: 1225287673}
 --- !u!114 &1113831246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2157,7 +2131,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1113831245}
+      - m_Target: {fileID: 651409643}
         m_MethodName: deleteObject
         m_Mode: 1
         m_Arguments:
