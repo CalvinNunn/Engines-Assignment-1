@@ -20,7 +20,10 @@ public class SpawnObject : MonoBehaviour
 
     public List<Vector3> cubePositions;
 
+    public GameObject goalC;
+
     public GameObject cubeContainer;
+
 
     float xP;
     float yP;
@@ -89,6 +92,26 @@ public class SpawnObject : MonoBehaviour
         }
 
         return getPos;
+    }
+
+    public void gameConidition()
+    {
+        xP = float.Parse(xPos.text);
+
+        yP = float.Parse(yPos.text);
+
+        zP = float.Parse(zPos.text);
+
+        xS = float.Parse(xScale.text);
+
+        yS = float.Parse(yScale.text);
+
+        zS = float.Parse(zScale.text);
+
+        GameObject goal = Instantiate(goalC, new Vector3(xP, yP, zP), Quaternion.identity);
+
+        goal.transform.localScale = new Vector3(xS, yS, zS);
+
     }
 
 

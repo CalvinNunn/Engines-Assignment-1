@@ -9,7 +9,6 @@ extern "C"
 #endif
 
 	PLUGIN_API void saveFile(float x, float y, float z, float sX, float sY, float sZ);
-
 	PLUGIN_API int loadFileX(int i);
 	PLUGIN_API int loadFileY(int i);
 	PLUGIN_API int loadFileZ(int i);

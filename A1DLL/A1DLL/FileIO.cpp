@@ -11,7 +11,9 @@ void FileIO::saveFile(float x, float y, float z, float sX, float sY, float sZ) {
 	myfile.close();
 }
 
+
 void FileIO::clearFile() {
+	myfile.open("pos.txt");
 	myfile.clear();
 }
 
@@ -23,7 +25,7 @@ int FileIO::loadFileX(int i) {
 
 
 	if (lfile.is_open()) {
-		for (int j = 0; j < i; j++) {
+		for (int j = 0; j <= i; j++) {
 			getline(lfile, line);
 
 			
@@ -44,7 +46,7 @@ int FileIO::loadFileY(int i) {
 
 
 		if (lfile.is_open()) {
-			for (int j = 0; j < i; j++) {
+			for (int j = 0; j <= i; j++) {
 				getline(lfile, line);
 
 
@@ -69,7 +71,7 @@ int FileIO::loadFileZ(int i) {
 
 	
 		if (lfile.is_open()) {
-			for (int j = 0; j < i; j++) {
+			for (int j = 0; j <= i; j++) {
 				getline(lfile, line);
 
 
@@ -95,7 +97,7 @@ int FileIO::loadFileSX(int i)
 
 
 	if (lfile.is_open()) {
-		for (int j = 0; j < i; j++) {
+		for (int j = 0; j <= i; j++) {
 			getline(lfile, line);
 
 
@@ -105,8 +107,8 @@ int FileIO::loadFileSX(int i)
 	lfile.close();
 	string subs = line.substr(line.find(",") + 1);
 	string subs2 = subs.substr(subs.find(",") + 1);
-	string subs3 = subs2.substr(subs2.find(","));
-	int x = stoi(subs3);
+	string subs3 = subs2.substr(subs2.find(",") + 1);
+	int x = stoi(subs3.substr(0, subs3.find(",")));
 
 	return x;
 }
@@ -119,7 +121,7 @@ int FileIO::loadFileSY(int i)
 
 
 	if (lfile.is_open()) {
-		for (int j = 0; j < i; j++) {
+		for (int j = 0; j <= i; j++) {
 			getline(lfile, line);
 
 
@@ -130,8 +132,8 @@ int FileIO::loadFileSY(int i)
 	string subs = line.substr(line.find(",") + 1);
 	string subs2 = subs.substr(subs.find(",") + 1);
 	string subs3 = subs2.substr(subs2.find(",") + 1);
-	string subs4 = subs3.substr(subs3.find(","));
-	int y = stoi(subs4);
+	string subs4 = subs3.substr(subs3.find(",") + 1);
+	int y = stoi(subs4.substr(0,subs4.find(",")));
 
 	return y;
 }
@@ -144,7 +146,7 @@ int FileIO::loadFileSZ(int i)
 
 
 	if (lfile.is_open()) {
-		for (int j = 0; j < i; j++) {
+		for (int j = 0; j <= i; j++) {
 			getline(lfile, line);
 
 
@@ -156,7 +158,7 @@ int FileIO::loadFileSZ(int i)
 	string subs2 = subs.substr(subs.find(",") + 1);
 	string subs3 = subs2.substr(subs2.find(",") + 1);
 	string subs4 = subs3.substr(subs3.find(",") + 1);
-	int z = stoi(subs4);
+	int z = stoi(subs4.substr(0,subs4.find(",")));
 
 	return z;
 }

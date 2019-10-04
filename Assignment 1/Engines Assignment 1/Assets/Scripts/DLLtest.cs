@@ -46,7 +46,7 @@ public class DLLtest : MonoBehaviour
 
     void Start()
     {
-        clearFile();
+        
         Button bt = saveB.GetComponent<Button>();
         bt.onClick.AddListener(SaveOnClick);
 
@@ -56,13 +56,15 @@ public class DLLtest : MonoBehaviour
 
     void SaveOnClick()
     {
-
-
+        clearFile();
+        saveFile(0, 0, 0, 0, 0, 0);
+        //dummy data fills first position
         for (int i = 0; i < cubeContainer.transform.childCount; i++)
         {
-            saveFile(cubeContainer.transform.GetChild(i).position.x, cubeContainer.transform.GetChild(i).position.y, cubeContainer.transform.GetChild(i).position.z, 
+            saveFile(cubeContainer.transform.GetChild(i).position.x, cubeContainer.transform.GetChild(i).position.y, cubeContainer.transform.GetChild(i).position.z,
                 cubeContainer.transform.GetChild(i).localScale.x, cubeContainer.transform.GetChild(i).localScale.y, cubeContainer.transform.GetChild(i).localScale.z);
         }
+
 
     }
 
@@ -86,11 +88,10 @@ public class DLLtest : MonoBehaviour
             int sX = loadFileSX(i);
             int sY = loadFileSY(i);
             int sZ = loadFileSZ(i);
+                        
+            GameObject newObj = Instantiate(p, new Vector3(x, y, z), Quaternion.identity);
 
-            
-            GameObject newObj = Instantiate(p, new Vector3(1, 2, 3), Quaternion.identity);
-
-            newObj.transform.localScale = new Vector3 (1, 2, 3);
+            newObj.transform.localScale = new Vector3 (sX, sY, sZ);
 
             //newObj.transform.parent = cubeContainer.transform;
 
@@ -98,6 +99,16 @@ public class DLLtest : MonoBehaviour
 
         }
         
+    }
+
+    void save()
+    {
+        clearFile();
+        for (int i = 0; i < cubeContainer.transform.childCount; i++)
+        {
+            saveFile(cubeContainer.transform.GetChild(i).position.x, cubeContainer.transform.GetChild(i).position.y, cubeContainer.transform.GetChild(i).position.z,
+                cubeContainer.transform.GetChild(i).localScale.x, cubeContainer.transform.GetChild(i).localScale.y, cubeContainer.transform.GetChild(i).localScale.z);
+        }
     }
 
 }
