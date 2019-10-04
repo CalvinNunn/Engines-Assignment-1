@@ -46,4 +46,16 @@ public class PlayerControl : MonoBehaviour
     {
         r.AddForce(transform.up * 8, ForceMode.Impulse);
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Key")
+        {
+            #if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+            #else
+          Application.Quit();
+            #endif
+        }
+    }
 }
