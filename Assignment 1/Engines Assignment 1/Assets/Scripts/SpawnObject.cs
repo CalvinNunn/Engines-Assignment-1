@@ -64,7 +64,7 @@ public class SpawnObject : MonoBehaviour
             gO = spawnedObject;
 
             //without flyweight
-            //gO.transform.position = getPositions()[getPositions().Count];
+            //gO.transform.position = getPositions()[getPositions().Count - 1];
 
             //with flyweight
             gO.transform.position = cubePositions[cubePositions.Count - 1];
